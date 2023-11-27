@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [ -z "$PYFILE" ]; then
+    echo "Error: PYFILE environment variable not set."
+    exit 1
+fi
+
+output_filename="${PYFILE%.py}.pyc"
+
+echo "Compiling $PYFILE ..."
+python3 -m py_compile "$PYFILE" && mv "__pycache__/$my_main.pyc" .
+
+echo "Compiled file: $my_main.pyc"
