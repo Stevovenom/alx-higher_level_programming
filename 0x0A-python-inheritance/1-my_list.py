@@ -1,5 +1,10 @@
 #!/usr/bin/python3
+""" It inherits from the list """
+
+
 class MyList(list):
+    """ It inherits from the list """
+
     def print_sorted(self):
-        sorted_list = sorted(self)
-        print(sorted_list)
+        """ It prits out the sorted list """
+        print(sorted(self))
