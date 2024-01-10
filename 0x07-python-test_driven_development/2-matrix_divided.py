@@ -1,5 +1,20 @@
 #!/usr/bin/python3
 def matrix_divided(matrix, div):
+    """
+    Divides all elements of a matrix by a given number.
+
+    Args:
+        matrix (list): A list of lists of integers or floats.
+        div (int or float): The number to divide by.
+
+    Raises:
+        TypeError: If matrix is not a list of lists of integers or floats,
+                   or if div is not a number (integer or float).
+        ZeroDivisionError: If div is equal to 0.
+
+    Returns:
+        list: A new matrix with elements divided by div, rounded to 2 decimal places.
+    """
     errorMessage = "matrix must be a matrix (list of lists) of integers/floats"
     if not matrix:
         raise TypeError(errorMessage)
