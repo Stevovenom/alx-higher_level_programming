@@ -1,0 +1,1 @@
+The task revolves around teh use of the object relational mapping(ORM) to automate the transfer of data stored in a relational database tables into objects that are more commonly used in application code.
