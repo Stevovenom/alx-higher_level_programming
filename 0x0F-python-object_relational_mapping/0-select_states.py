@@ -14,12 +14,12 @@ if __name__ == '__main__':
 # the cursor function that will be used to execute sql queries
     cur=db.cursor()
 # executes the query that selects all from states
-    cur.execute("SELECT * FROM states ORDER BY id")
+    cur.execute("SELECT * FROM states")
 # fetches the rows from the states column
     rows=cur.fetchall()
 # displays the fetched rows
     for row in rows:
-        print(rows)
+        print(row)
 # end the proceses
     cur.close()
     db.close()
