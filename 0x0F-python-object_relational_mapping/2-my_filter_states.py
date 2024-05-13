@@ -1,34 +1,27 @@
 #!/usr/bin/python3
 """
-imports the sql database
+Script that takes in an argument and displays all values in the states
+table of hbtn_0e_0_usa where name matches the argument
 """
 import MySQLdb
-import sys
+from sys import argv
 
-# This line checks if the script is being run as the main program
-# (not imported as a module). if it is, the code below itwill be executed
+# The code should not be executed when imported
 if __name__ == '__main__':
-    if len(sys.argv) != 5:
-        print("Usage: ./script.py <username> <password> <database_name> <name>")
-        exit(1)
 
-    username = sys.argv[1]
-    password = sys.argv[2]
-    database = sys.argv[3]
-    name_arg = sys.argv[4]
+    # make a connection to the database
+    db = MySQLdb.connect(host="localhost", port=3306, user=argv[1],
+                         passwd=argv[2], db=argv[3])
 
-    # connect to the database
-    db = MySQLdb.connect(host="localhost", port=3306, user="root",
-                         passwd=password, db="hbtn_0e_0_usa")
-
+    # It gives us the ability to have multiple seperate working environments
+    # through the same connection to the database.
     cur = db.cursor()
-    query = "SELECT * FROM states WHERE name = %s"
-    cur.execute(query, (name_arg,))
+    stAte = "SELECT * FROM states WHERE name LIKE BINARY '{}'".format(argv[4])
+    cur.execute(stAte)
+
     rows = cur.fetchall()
-
-    for row in rows:
-        print(row)
-
+    for i in rows:
+        print(i)
+    # Clean up process
     cur.close()
     db.close()
-
