@@ -1,8 +1,5 @@
-#!/usr/bin/env python3
-"""
- script that takes in the name of a state as an argument
- lists all cities of that state, using the database hbtn_0e_4_usa
- """
+#!/usr/bin/python3
+""" Select states with names matching arguments """
 import MySQLdb
 from sys import argv
 
