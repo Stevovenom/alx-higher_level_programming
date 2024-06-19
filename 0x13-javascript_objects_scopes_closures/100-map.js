@@ -1,4 +1,9 @@
 #!/usr/bin/node
-let list = require('./100-data').list;
-console.log(list);
-console.log(list.map((element, index) => element * index));
+/* import a list */
+const lista = require('./100-data').list;
+
+const mapeado = lista.map((x, index) => {
+  return x * index;
+});
+console.log(lista);
+console.log(mapeado);
