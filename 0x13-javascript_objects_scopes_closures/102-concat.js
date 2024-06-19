@@ -1,10 +1,8 @@
 #!/usr/bin/node
-const fs = require('fs');
-let args = process.argv.slice(2);
-if (args.length < 3) {
-  console.log('Usage: ./102-concat.js fileA fileB fileC');
-  process.exit(1);
-}
-let fa = fs.readFileSync(args[0]);
-let fb = fs.readFileSync(args[1]);
-fs.writeFileSync(args[2], fa + fb);
+/* concat files */
+const result = require('fs');
+
+const first = result.readFileSync(process.argv[2], 'utf8');
+const second = result.readFileSync(process.argv[3], 'utf8');
+
+result.writeFileSync(process.argv[4], (first + second));
