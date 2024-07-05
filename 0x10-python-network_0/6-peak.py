@@ -2,6 +2,7 @@
 """script for finding peak in list of ints, interview prep
 """
 
+
 def find_peak(list_of_integers):
     """Function to find a peak element in a list of unsorted integers."""
     if not list_of_integers:
