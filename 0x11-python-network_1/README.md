@@ -233,3 +233,40 @@ if __name__ == "__main__":
     r = requests.get("https://api.github.com/user", auth=auth)
     print(r.json().get("id"))
 </code>
+
+
+## Task 10
+To solve the challenge of listing 10 commits (from the most recent to oldest) of the repository "rails" by the user "rails" using the GitHub API, we'll proceed with the following steps:<br>
+
+Steps to Implement the Script:
+[1] Import Required Module: Use the requests module for making HTTP requests.
+
+Process Command Line Arguments: Retrieve the repository name and owner name from command line arguments (sys.argv[1] for repository name and sys.argv for owner name).
+
+[3] Construct API Request:
+
+Use the GitHub API endpoint for listing commits in a repository (https://api.github.com/repos/{owner}/{repo}/commits).
+Format the URL with the repository name and owner name provided.
+
+[4] Send Request and Handle Response:
+
+Send a GET request to the GitHub API with the constructed URL.
+Check the response status code.
+If the request is successful (status code 200), parse the response JSON to extract and print the information for the 10 most recent commits:
+Print each commit's SHA and author's name.
+
+[5] Rate Limit Consideration: GitHub API has rate limits (60 requests per hour for unauthenticated requests from a single IP). Ensure the script doesn't exceed this limit.
+
+## Explanation:
+Command Line Arguments: sys.argv[1] is the repository name ("rails") and sys.argv[2] is the owner name ("rails").
+
+Request Construction:
+
+url: GitHub API endpoint constructed using f-string formatting with repository and owner names.
+Handling Response:
+
+Send a GET request to the GitHub API endpoint for commits.
+Extract the JSON response and limit it to the first 10 commits (response.json()[:10]).
+Iterate through these commits, extracting the SHA (commit['sha']) and author's name (commit['commit']['author']['name']).
+Print each commit in the required format.
+Rate Limit Consideration: Ensure the script stays within the rate limits by GitHub API (60 requests per hour per IP).
