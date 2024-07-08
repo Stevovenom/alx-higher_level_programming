@@ -13,5 +13,9 @@ if __name__ == "__main__":
     url = sys.argv[1]  # Read URL from command-line argument
     request = urllib.request.Request(url)
 
-    with urllib.request.urlopen(request) as response:
-        print(dict(response.headers).get("X-Request-Id"))
+    # Check if X-Request-Id header exists in response
+    if 'X-Request-Id' in response.headers:
+        request_id = response.headers['X-Request-Id']
+        print(request_id)
+    else:
+        print("No X-Request-Id found in the headers")
