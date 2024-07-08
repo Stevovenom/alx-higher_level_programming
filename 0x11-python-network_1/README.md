@@ -85,4 +85,10 @@ For this, I had created two server test programs so as to aid me in the debuggin
 Through this, the test files were being executed fully and optimally.
 
 ## Task 4
+To fetch the status from https://alx-intranet.hbtn.io/status and display the response using the requests package in Python, follow these steps. Remember, you're only allowed to use the requests package and no other external packages.<br></br>
+
+## Task 5
+To achieve the task of fetching the value of the X-Request-Id header from a URL using Python, you'll utilize the requests library for making HTTP requests and sys for handling command-line arguments. <br></br>
+
+## Task 6
 
