@@ -4,10 +4,12 @@ Python script that takes in a URL, sends a request to the URL and displays
 the value of the variable X-Request-Id in the response header
 """
 import requests
-import sys
+import sys import argv
 
 if __name__ == "__main__":
-    url = sys.argv[1]  # Read URL from command-line argument
+
+    # URL from teh command-line
+    url = sys.argv[1]
     response = requests.get(url)
 
     # Check if X-Request-Id header exists in response
