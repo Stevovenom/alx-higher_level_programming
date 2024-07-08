@@ -32,4 +32,26 @@ with urllib.request.urlopen(url) as response:
 
 ## task 1
 
+For this one, the scripy should be a Python script that takes in a URL, sends a request to the URL and displays the value of the X-Request-Id variable found in the header of the response.
+
+# Explanation
+Imports:
+
+<strong>urllib.request</strong> is imported for making the HTTP request.
+<strong>sys</strong> is imported to read command-line arguments.<br>
+
+URL Argument:
+
+The URL is taken from the command-line arguments using sys.argv[1].
+Request and Response:
+
+<code>urllib.request.urlopen(url)</code> is used to open the URL.
+The with statement ensures that the connection is properly closed after the response is processed.
+Headers and X-Request-Id:
+
+<code>response.info()</code> retrieves the headers from the response.
+<code>headers.get('X-Request-Id')</code> fetches the value of the X-Request-Id header.
+The value is then printed.
+
+## Task 2
 
