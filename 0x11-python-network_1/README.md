@@ -15,4 +15,21 @@ After this lets proceed to the tasks:
 ## task 0
 We are to write a pythn script that fetches <strong>https://alx-intranet.hbtn.io/status</strong>
 
+Though I tried to run this code in the first place,<br>
+<code>
+import urllib.request
+
+url = 'https://alx-intranet.hbtn.io/status'
+
+with urllib.request.urlopen(url) as response:
+    body = response.read()
+    print('Body response:')
+    print(f'\t- type: {type(body)}')
+    print(f'\t- content: {body}')
+    print(f'\t- utf8 content: {body.decode("utf-8")}')
+
+</code> <br></br> And I received issues with the checker, but on debugging, the main issue was due to not creating a Request object <code>urllib.request.Request("https://intranet.hbtn.io/status</code>, though the outputs were the same.
+
+## task 1
+
 
