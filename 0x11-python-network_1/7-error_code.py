@@ -11,7 +11,9 @@ if __name__ == "__main__":
 
     try:
         response = requests.get(url)
-        response.raise_for_status()  # Raise an exception for 4xx and 5xx errors
+
+        # Raise an exception for 4xx and 5xx errors
+        response.raise_for_status()
 
         # If no exception was raised, print the body of the response
         print(response.text)
