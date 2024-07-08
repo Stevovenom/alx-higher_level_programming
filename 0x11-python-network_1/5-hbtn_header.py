@@ -8,8 +8,7 @@ import sys
 
 if __name__ == "__main__":
 
-    # URL from teh command-line
-    url = sys.argv[1]
+    # URL from teh commandline
     url = sys.argv[1]  # Read URL from command-line argument
     request = urllib.request.Request(url)
 
