@@ -54,4 +54,35 @@ Headers and X-Request-Id:
 The value is then printed.
 
 ## Task 2
+Explanation
+Imports:
+
+<strong>urllib.request<strong> is imported for making the HTTP request.
+<strong>urllib.parse</strong> is imported for encoding the email parameter.
+<strong>sys</strong> is imported to read command-line arguments.
+URL and Email Arguments:
+
+The URL and email are taken from the command-line arguments using <strong>sys.argv[1]</strong> and <strong>sys.argv[2]</strong>.
+## Data Encoding:
+
+<strong><code>urllib.parse.urlencode</code></strong> encodes the email parameter as a query string. The result is then encoded to bytes using .encode('utf-8').
+POST Request:
+
+<code>urllib.request.Request(url, data=data)</code> creates a POST request with the URL and the encoded email data.
+Sending the Request and Reading the Response:<br></br>
+
+<code>urllib.request.urlopen(request)</code> sends the POST request.<br>
+The with statement ensures that the connection is properly closed after the response is processed.
+<code>response.read()</code> reads the body of the response.<br></br>
+<code>body.decode('utf-8')</code> decodes the response body from bytes to a UTF-8 string.<br></br>
+The decoded response body is printed.
+
+## Task 3
+For this, I had created two server test programs so as to aid me in the debugging, the names to the files are:<br></br>
+1. server_test.py 
+2. simple_server.py 
+
+Through this, the test files were being executed fully and optimally.
+
+## Task 4
 
