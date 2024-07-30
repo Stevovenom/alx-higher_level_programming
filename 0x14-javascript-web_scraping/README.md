@@ -132,10 +132,10 @@ While web scraping is a powerful tool, it is essential to consider the legal and
 By understanding these concepts and using the appropriate tools and techniques, you can effectively scrape data from both static and dynamic websites using JavaScript.<br>
 
 #Further Reading
-<a href="https://intranet.alxswe.com/rltoken/ONv-sSv-FA87Mc5rMZmO6A">Working with JSON data</a>
-<a href="https://intranet.alxswe.com/rltoken/zm0h7FqpQCZZpPZqxxwLxA">The workflow of accessing the attributes of a simply-created JSON object by Jimmy Tran from Cohort 1 - San Francisco</a>
-<a href="https://intranet.alxswe.com/rltoken/goymbxGy-cTc5ZdKBTUcTQ">Request Module</a>
-<a href="https://intranet.alxswe.com/rltoken/j2PStAUtVPdXKwrrFxpt0g">Modern JS</a>
-<a href="https://pptr.dev/">Puppeteer Documentation</a>
-<a href="https://axios-http.com/">Axios Documentation</a>
-<a href="https://github.com/Stevovenom/modern-js-cheatsheet">Modern JS cheetcode</a>
+<a href="https://intranet.alxswe.com/rltoken/ONv-sSv-FA87Mc5rMZmO6A">Working with JSON data</a><br>
+<a href="https://intranet.alxswe.com/rltoken/zm0h7FqpQCZZpPZqxxwLxA">The workflow of accessing the attributes of a simply-created JSON object by Jimmy Tran from Cohort 1 - San Francisco</a><br>
+<a href="https://intranet.alxswe.com/rltoken/goymbxGy-cTc5ZdKBTUcTQ">Request Module</a><br>
+<a href="https://intranet.alxswe.com/rltoken/j2PStAUtVPdXKwrrFxpt0g">Modern JS</a><br>
+<a href="https://pptr.dev/">Puppeteer Documentation</a><br>
+<a href="https://axios-http.com/">Axios Documentation</a><br>
+<a href="https://github.com/Stevovenom/modern-js-cheatsheet">Modern JS cheetcode</a><br>
